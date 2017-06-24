@@ -29,7 +29,10 @@ android:
     # Create and start emulator
     - echo no | android create avd --force -n test -t android-16 --abi armeabi-v7a
     - emulator -avd test -no-skin -no-audio -no-window &
-    - ./wait_for_emulator
+    - "./wait_for_emulator"
 
-  script: ./gradlew connectedAndroidTest
+  script: "./gradlew connectedAndroidTest"
 
+notifications:
+  slack:
+    secure: YhCdTcZp6dljMEIqTPBrrnx6edTOWfFsmc7Lnx6wdEbGghGwlSjxycPcY1Ca5qqtYilRpU1qZigjBLueqYfgGtyPD14JKyskPTcd+EvLJssMEegqid02ONy68zogQqRgKElvHipKS+aOD6rqBB6KvKuiLWyt0pfHjViBbHlBc1ocpPCyTUdhOBaksdy8F+CweAQHAj5VXFanCBNrLSyHE/7vYH2Edmu3eJHXboSFC6x7az+Qs/iee08WiP4fG42c1rL8pUEhcIVJetmFLARDDq2ZCYnpRN63MRM3esrHt/oC6u3fkbx7vMMa6OUA+JDtfaOLRxW3/mCYs5ukN8LDJHBF2LxfP4dv1bBRi+r7gs8jvlrkk9NkPyYFUC2pbljPAEg+8aSWPFwcmW05fusCvzsCKZlt/2U9NV9QNVSM8NtSgOQYEjoQPd4Gipsby/BxcPY4M2dlT5OhwxtmTdIJ/bIRNYm+SLPZXkA1R9Ujf/E9r6IVGW64GDbHl7a/VsOPdCR+dpZ1dRQZIXRYxpsKUdlomE9qUuG6KDI8jfBXzs+fnwIyVfIcTScFwpt3hero5H5QX3OKpWjUgJK/uKgR9wFtoc/mfWBietHNTshfF2L6NG8pQtIW0RG6ENut9QjXv6bOpAH6D0MhoFE3zSvhHAtDQ+o5h17OnPHCzUHu3g0=

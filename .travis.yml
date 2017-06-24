@@ -5,6 +5,7 @@ android:
     # use the latest revision of Android SDK Tools
     - tools
     - platform-tools
+    - tools
 
     # The BuildTools version used by your project
     - build-tools-25.0.2
@@ -22,3 +23,5 @@ android:
     # if you need to run emulator(s) during your tests
     - sys-img-armeabi-v7a-android-25
     - sys-img-armeabi-v7a-android-16
+
+  script: ./gradlew clean assemble

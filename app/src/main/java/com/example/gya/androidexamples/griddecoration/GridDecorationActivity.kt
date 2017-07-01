@@ -27,6 +27,7 @@ class GridDecorationActivity : AppCompatActivity() {
         val adapter = GridItemAdapter()
         recycler.adapter = adapter
         recycler.layoutManager = GridDecorationLayoutManager(this, adapter)
+        recycler.addItemDecoration(GridItemDecoration(this))
         recycler.setHasFixedSize(true)
     }
 }

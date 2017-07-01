@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.support.annotation.ColorInt
+import android.support.design.widget.CoordinatorLayout
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -15,7 +16,7 @@ import android.widget.ImageView
 import com.example.gya.androidexamples.R
 
 /**
- * RecyclerViewのスクロールをBehaviorでうけとるActivity
+ * [RecyclerView] のスクロールを [CoordinatorLayout.Behavior] でうけとる [AppCompatActivity]
  */
 class BehaviorNotifyActivity : AppCompatActivity() {
 

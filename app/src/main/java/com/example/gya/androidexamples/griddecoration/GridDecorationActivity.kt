@@ -4,11 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.example.gya.androidexamples.R
 
 /**
- * GridLayoutManagerでViewHolder/SpanSizeごとにDecorationするActivity
+ * [RecyclerView.ViewHolder] と[GridLayoutManager.getSpanSize] によって
+ * [RecyclerView.ItemDecoration] を切り替える [AppCompatActivity]
  */
 class GridDecorationActivity : AppCompatActivity() {
 

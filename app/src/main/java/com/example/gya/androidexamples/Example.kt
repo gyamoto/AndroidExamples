@@ -8,5 +8,5 @@ enum class Example(val description: String, val action: (Context) -> Unit) {
     BehaviorNotify("RecyclerViewのスクロールをBehaviorでうけとる", { BehaviorNotifyActivity.start(it) }),
     MultiRecycler("RecyclerViewを縦に2つ重ねてみる", { Unit }),
     FragmentShared("FragmentTransitionしたときViewをSharedElementでアニメーション", { Unit }),
-    GridDecoration("GridLayoutManagerでViewHolder/SpanSizeごとにDecoration", { GridDecorationActivity.start(it) }),
+    GridDecoration("ViewHolder/SpanSizeごとにDecorationを切り替える", { GridDecorationActivity.start(it) }),
 }

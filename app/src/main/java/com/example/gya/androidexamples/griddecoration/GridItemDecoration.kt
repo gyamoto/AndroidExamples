@@ -8,7 +8,8 @@ import android.view.View
 import com.example.gya.androidexamples.R
 
 /**
- * [LargeViewHolder] と [SmallViewHolder] で上下左右に等しい余白をもたせる [RecyclerView.ItemDecoration]
+ * [LargeViewHolder] と [MediumViewHolder] と [SmallViewHolder] によって
+ * SpanSizeが異なるときも上下左右に等しい余白をもたせる [RecyclerView.ItemDecoration]
  */
 class GridItemDecoration(context: Context) : RecyclerView.ItemDecoration() {
 
@@ -23,14 +24,21 @@ class GridItemDecoration(context: Context) : RecyclerView.ItemDecoration() {
 
         when (parent.findContainingViewHolder(view)) {
             is LargeViewHolder -> {
-                outRect.set(margin, if (isTop) 0 else margin, margin, 0)
+                outRect.set(margin, if (isTop) margin else 0, margin, margin)
+            }
+            is MediumViewHolder -> {
+                outRect.set(
+                        if (isStart) margin else margin / 2,
+                        if (isTop) margin else 0,
+                        if (isEnd) margin else margin / 2,
+                        margin)
             }
             is SmallViewHolder -> {
                 outRect.set(
-                        if (isStart) margin else margin / 2,
-                        if (isTop) 0 else margin,
-                        if (isEnd) margin else margin / 2,
-                        0)
+                        if (isStart) margin else if (isEnd) margin / 3 else margin * 2 / 3,
+                        if (isTop) margin else 0,
+                        if (isStart) margin / 3 else if (isEnd) margin else margin * 2 / 3,
+                        margin)
             }
         }
     }

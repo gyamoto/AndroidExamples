@@ -17,6 +17,8 @@
         </activity>
 
         <activity android:name=".behaviornotify.BehaviorNotifyActivity" />
+
+        <activity android:name=".griddecoration.GridDecorationActivity" />
     </application>
 
 </manifest>

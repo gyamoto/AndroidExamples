@@ -19,6 +19,8 @@
         <activity android:name=".behaviornotify.BehaviorNotifyActivity" />
 
         <activity android:name=".griddecoration.GridDecorationActivity" />
+
+        <activity android:name=".multirecycler.MultiRecyclerActivity" />
     </application>
 
 </manifest>

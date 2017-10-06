@@ -10,7 +10,7 @@ import com.example.gya.androidexamples.R
 
 sealed class GridViewHolder(parent: ViewGroup, @LayoutRes layout: Int)
     : RecyclerView.ViewHolder(LayoutInflater.from(parent.context).inflate(layout, parent, false)) {
-    private val image by lazy { itemView.findViewById(R.id.image) as ImageView }
+    private val image by lazy { itemView.findViewById<ImageView>(R.id.image) }
 
     fun bind(@ColorInt color: Int) {
         image.setBackgroundColor(color)

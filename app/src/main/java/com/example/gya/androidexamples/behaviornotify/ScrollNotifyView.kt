@@ -15,7 +15,7 @@ class ScrollNotifyView @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
-    private val status by lazy { findViewById(R.id.status) as TextView }
+    private val status by lazy { findViewById<TextView>(R.id.status) }
 
     init {
         View.inflate(context, R.layout.view_behavior_notify_scroll, this)
@@ -28,12 +28,12 @@ class ScrollNotifyView @JvmOverloads constructor(
             return dependency is RecyclerView
         }
 
-        override fun onStartNestedScroll(coordinatorLayout: CoordinatorLayout?, child: ScrollNotifyView?, directTargetChild: View?, target: View?, nestedScrollAxes: Int): Boolean {
+        override fun onStartNestedScroll(coordinatorLayout: CoordinatorLayout, child: ScrollNotifyView, directTargetChild: View, target: View, nestedScrollAxes: Int): Boolean {
             Log.i("NotifyBehavior", "onStartNestedScroll")
             return nestedScrollAxes == View.SCROLL_AXIS_VERTICAL
         }
 
-        override fun onNestedScroll(coordinatorLayout: CoordinatorLayout, child: ScrollNotifyView, target: View?, dxConsumed: Int, dyConsumed: Int, dxUnconsumed: Int, dyUnconsumed: Int) {
+        override fun onNestedScroll(coordinatorLayout: CoordinatorLayout, child: ScrollNotifyView, target: View, dxConsumed: Int, dyConsumed: Int, dxUnconsumed: Int, dyUnconsumed: Int) {
             super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed)
             Log.i("NotifyBehavior", "onNestedScroll")
             Log.i("NotifyBehavior", "    dyConsumed: $dyConsumed")

@@ -8,8 +8,8 @@ import android.widget.TextView
 
 class ExampleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    private val title by lazy { itemView.findViewById(R.id.title) as TextView }
-    private val description by lazy { itemView.findViewById(R.id.description) as TextView }
+    private val title by lazy { itemView.findViewById<TextView>(R.id.title) }
+    private val description by lazy { itemView.findViewById<TextView>(R.id.description) }
 
     companion object {
         fun inflate(parent: ViewGroup) = ExampleViewHolder(

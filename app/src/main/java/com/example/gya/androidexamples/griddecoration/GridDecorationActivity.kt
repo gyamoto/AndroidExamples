@@ -14,7 +14,7 @@ import com.example.gya.androidexamples.R
  */
 class GridDecorationActivity : AppCompatActivity() {
 
-    private val recycler by lazy { findViewById(R.id.recycler) as RecyclerView }
+    private val recycler by lazy { findViewById<RecyclerView>(R.id.recycler) }
 
     companion object {
         fun start(context: Context) {

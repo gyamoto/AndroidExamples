@@ -25,8 +25,8 @@ class MultiRecyclerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_multi_recycler)
 
-        val first = findViewById(R.id.first) as CollapsableRecyclerView
-        val second = findViewById(R.id.second) as CollapsableRecyclerView
+        val first: CollapsableRecyclerView = findViewById(R.id.first)
+        val second: CollapsableRecyclerView = findViewById(R.id.second)
 
         first.background = Color.GRAY
         first.collapsedColor = Color.WHITE

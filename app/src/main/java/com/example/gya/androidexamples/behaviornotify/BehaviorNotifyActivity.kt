@@ -26,7 +26,7 @@ class BehaviorNotifyActivity : AppCompatActivity() {
         }
     }
 
-    private val recycler by lazy { findViewById(R.id.recycler) as RecyclerView }
+    private val recycler by lazy { findViewById<RecyclerView>(R.id.recycler) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +55,7 @@ class BehaviorNotifyActivity : AppCompatActivity() {
     }
 
     inner class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val image by lazy { itemView.findViewById(R.id.image) as ImageView }
+        private val image by lazy { itemView.findViewById<ImageView>(R.id.image) }
 
         fun bind(@ColorInt color: Int) {
             image.setBackgroundColor(color)

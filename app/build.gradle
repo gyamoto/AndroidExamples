@@ -1,25 +1,28 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
-ext.support_version = '26.1.0'
+ext.support_version = '27.0.2'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+
+    compileSdkVersion 27
+
     defaultConfig {
         applicationId "com.example.gya.androidexamples"
         minSdkVersion 19
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }

@@ -21,6 +21,8 @@
         <activity android:name=".griddecoration.GridDecorationActivity" />
 
         <activity android:name=".multirecycler.MultiRecyclerActivity" />
+
+        <activity android:name=".simplesharedelement.SimpleSharedElementActivity" />
     </application>
 
 </manifest>

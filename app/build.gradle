@@ -1,7 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
-ext.support_version = '27.0.2'
+ext.support_version = '27.1.0'
 
 android {
 
@@ -35,6 +36,7 @@ dependencies {
     })
     implementation "com.android.support:appcompat-v7:$support_version"
     implementation "com.android.support:design:$support_version"
+    implementation "com.android.support:transition:$support_version"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
     testImplementation 'junit:junit:4.12'

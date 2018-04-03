@@ -38,6 +38,7 @@ dependencies {
     implementation "com.android.support:design:$support_version"
     implementation "com.android.support:transition:$support_version"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'androidx.core:core-ktx:0.2'
 
     testImplementation 'junit:junit:4.12'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

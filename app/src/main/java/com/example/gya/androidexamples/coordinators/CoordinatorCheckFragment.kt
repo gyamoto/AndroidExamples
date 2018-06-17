@@ -11,7 +11,11 @@ class CoordinatorCheckFragment : Fragment() {
 
     private val layoutId by lazy { arguments?.getInt(KEY_LAYOUT) ?: throw IllegalStateException() }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(layoutId, container, false)
     }
 

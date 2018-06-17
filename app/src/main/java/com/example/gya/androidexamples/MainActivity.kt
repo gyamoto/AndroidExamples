@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
 
             override fun getItemCount(): Int = Example.values().size
 
-            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ExampleViewHolder.inflate(parent)
+            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+                ExampleViewHolder.inflate(parent)
 
             override fun onBindViewHolder(holder: ExampleViewHolder, position: Int) {
                 val example = Example.values()[position]

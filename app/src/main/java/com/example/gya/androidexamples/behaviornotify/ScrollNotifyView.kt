@@ -24,7 +24,11 @@ class ScrollNotifyView @JvmOverloads constructor(
 
     class NotifyBehavior : CoordinatorLayout.Behavior<ScrollNotifyView>() {
 
-        override fun layoutDependsOn(parent: CoordinatorLayout?, child: ScrollNotifyView?, dependency: View?): Boolean {
+        override fun layoutDependsOn(
+            parent: CoordinatorLayout?,
+            child: ScrollNotifyView?,
+            dependency: View?
+        ): Boolean {
             return dependency is RecyclerView
         }
 
@@ -48,7 +52,15 @@ class ScrollNotifyView @JvmOverloads constructor(
             dxUnconsumed: Int,
             dyUnconsumed: Int
         ) {
-            super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed)
+            super.onNestedScroll(
+                coordinatorLayout,
+                child,
+                target,
+                dxConsumed,
+                dyConsumed,
+                dxUnconsumed,
+                dyUnconsumed
+            )
             Log.i("NotifyBehavior", "onNestedScroll")
             Log.i("NotifyBehavior", "    dyConsumed: $dyConsumed")
             Log.i("NotifyBehavior", "    dyUnsonsumed: $dyUnconsumed")

@@ -15,7 +15,12 @@ class GridItemDecoration(context: Context) : RecyclerView.ItemDecoration() {
 
     private val margin = context.resources.getDimensionPixelSize(R.dimen.grid_decoration_margin)
 
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+    override fun getItemOffsets(
+        outRect: Rect,
+        view: View,
+        parent: RecyclerView,
+        state: RecyclerView.State
+    ) {
         val params = view.layoutParams as? GridLayoutManager.LayoutParams
         val spanIndex = params?.spanIndex ?: 0
         val spanSize = params?.spanSize ?: 1

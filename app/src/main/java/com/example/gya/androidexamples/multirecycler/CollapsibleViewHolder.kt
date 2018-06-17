@@ -15,7 +15,8 @@ class CollapsibleViewHolder(val view: ImageView) : RecyclerView.ViewHolder(view)
 
     companion object {
         fun inflate(parent: ViewGroup): CollapsibleViewHolder {
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_collapsible, parent, false)
+            val view = LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_collapsible, parent, false)
             return CollapsibleViewHolder(view as ImageView)
         }
     }

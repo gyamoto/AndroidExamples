@@ -43,7 +43,11 @@ class BehaviorNotifyActivity : AppCompatActivity() {
 
             override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
                 return ImageViewHolder(
-                    LayoutInflater.from(parent.context).inflate(R.layout.item_behavior_notify_color, parent, false)
+                    LayoutInflater.from(parent.context).inflate(
+                        R.layout.item_behavior_notify_color,
+                        parent,
+                        false
+                    )
                 )
             }
 

@@ -10,10 +10,9 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import com.example.gya.androidexamples.R
 
-@CoordinatorLayout.DefaultBehavior(ScrollNotifyView.NotifyBehavior::class)
 class ScrollNotifyView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : FrameLayout(context, attrs, defStyleAttr) {
+) : FrameLayout(context, attrs, defStyleAttr), CoordinatorLayout.AttachedBehavior {
 
     private val status by lazy { findViewById<TextView>(R.id.status) }
 
@@ -21,6 +20,8 @@ class ScrollNotifyView @JvmOverloads constructor(
         View.inflate(context, R.layout.view_behavior_notify_scroll, this)
         status.text = "scroll status"
     }
+
+    override fun getBehavior(): CoordinatorLayout.Behavior<*> = NotifyBehavior()
 
     class NotifyBehavior : CoordinatorLayout.Behavior<ScrollNotifyView>() {
 
@@ -37,10 +38,11 @@ class ScrollNotifyView @JvmOverloads constructor(
             child: ScrollNotifyView,
             directTargetChild: View,
             target: View,
-            nestedScrollAxes: Int
+            axes: Int,
+            type: Int
         ): Boolean {
             Log.i("NotifyBehavior", "onStartNestedScroll")
-            return nestedScrollAxes == View.SCROLL_AXIS_VERTICAL
+            return axes == View.SCROLL_AXIS_VERTICAL
         }
 
         override fun onNestedScroll(
@@ -50,7 +52,8 @@ class ScrollNotifyView @JvmOverloads constructor(
             dxConsumed: Int,
             dyConsumed: Int,
             dxUnconsumed: Int,
-            dyUnconsumed: Int
+            dyUnconsumed: Int,
+            type: Int
         ) {
             super.onNestedScroll(
                 coordinatorLayout,
@@ -59,7 +62,8 @@ class ScrollNotifyView @JvmOverloads constructor(
                 dxConsumed,
                 dyConsumed,
                 dxUnconsumed,
-                dyUnconsumed
+                dyUnconsumed,
+                type
             )
             Log.i("NotifyBehavior", "onNestedScroll")
             Log.i("NotifyBehavior", "    dyConsumed: $dyConsumed")

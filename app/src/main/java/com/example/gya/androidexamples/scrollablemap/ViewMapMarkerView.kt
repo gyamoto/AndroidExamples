@@ -9,9 +9,10 @@ class ViewMapMarkerView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyle: Int = 0
 ) : FloatingActionButton(context, attrs, defStyle) {
 
+    private val ovalSize = (resources.displayMetrics.density * 24).toInt()
+
     init {
-        val size = (resources.displayMetrics.density * 24).toInt()
-        layoutParams = FrameLayout.LayoutParams(size, size)
+        layoutParams = FrameLayout.LayoutParams(ovalSize, ovalSize)
     }
 
     var positionRatioX: Float = 0.5f
@@ -23,8 +24,8 @@ class ViewMapMarkerView @JvmOverloads constructor(
         translateX: Float,
         translateY: Float
     ) {
-        translationX = positionRatioX * scaleX + translateX
-        translationY = positionRatioY * scaleY + translateY
+        translationX = positionRatioX * scaleX + translateX - ovalSize / 2f
+        translationY = positionRatioY * scaleY + translateY - ovalSize / 2f
     }
 
 }

@@ -10,6 +10,7 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import android.view.View
+import androidx.core.graphics.values
 import androidx.core.view.children
 import androidx.core.view.plusAssign
 import com.example.gya.androidexamples.R
@@ -71,24 +72,18 @@ class ViewMapView @JvmOverloads constructor(
 
     @SuppressLint("SetTextI18n")
     private fun updateMatrix() {
-        val scaledCenterX = mapWidth * scaleFactor / 2f
-        val scaledCenterY = mapHeight * scaleFactor / 2f
 
         // update background image
-        mapMatrix.reset()
-        mapMatrix.postScale(scaleFactor, scaleFactor)
-        mapMatrix.postTranslate(focusX - scaledCenterX, focusY - scaledCenterY)
         bg_map.imageMatrix = mapMatrix
 
         // update foreground marker
-        val scaledMarkerCenterX = mapWidth * scaleFactor / 2f
-        val scaledMarkerCenterY = mapHeight * scaleFactor / 2f
+        val matrixArray = mapMatrix.values()
         marker_container.children.forEach {
             (it as? ViewMapMarkerView)?.updateScaleAndFocus(
-                scaleFactor * mapWidth,
-                scaleFactor * mapHeight,
-                focusX - scaledMarkerCenterX,
-                focusY - scaledMarkerCenterY
+                matrixArray[0] * mapWidth,
+                matrixArray[4] * mapHeight,
+                matrixArray[2],
+                matrixArray[5]
             )
         }
 
@@ -97,6 +92,11 @@ class ViewMapView @JvmOverloads constructor(
             x: $focusX
             y: $focusY
             scale: $scaleFactor
+
+            matrix:
+            ${matrixArray[0]}, ${matrixArray[1]}, ${matrixArray[2]}
+            ${matrixArray[3]}, ${matrixArray[4]}, ${matrixArray[5]}
+            ${matrixArray[6]}, ${matrixArray[7]}, ${matrixArray[8]}
         """.trimIndent()
     }
 
@@ -119,8 +119,7 @@ class ViewMapView @JvmOverloads constructor(
         distanceX: Float,
         distanceY: Float
     ): Boolean {
-        focusX -= distanceX
-        focusY -= distanceY
+        mapMatrix.postTranslate(-distanceX, -distanceY)
 
         return true
     }
@@ -132,7 +131,9 @@ class ViewMapView @JvmOverloads constructor(
     override fun onScaleEnd(detector: ScaleGestureDetector) = Unit
 
     override fun onScale(detector: ScaleGestureDetector): Boolean {
-        scaleFactor *= detector.scaleFactor
+        mapMatrix.postScale(
+            detector.scaleFactor, detector.scaleFactor, detector.focusX, detector.focusY
+        )
 
         return true
     }

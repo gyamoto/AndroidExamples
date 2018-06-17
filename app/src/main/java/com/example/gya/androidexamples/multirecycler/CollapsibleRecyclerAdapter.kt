@@ -16,7 +16,7 @@ class CollapsibleRecyclerAdapter : RecyclerView.Adapter<CollapsibleViewHolder>()
 
     var itemClickListener: OnCollapsibleClick = { Unit }
 
-    var colors: List<Int> by Delegates.observable(emptyList(), { property, old, new ->
+    var colors: List<Int> by Delegates.observable(emptyList()) { _, old, new ->
         DiffUtil.calculateDiff(object : DiffUtil.Callback() {
 
             override fun getOldListSize(): Int = old.size
@@ -30,7 +30,7 @@ class CollapsibleRecyclerAdapter : RecyclerView.Adapter<CollapsibleViewHolder>()
                 old[oldItemPosition] == new[newItemPosition]
 
         }).dispatchUpdatesTo(this)
-    })
+    }
 
     override fun getItemCount(): Int = colors.size
 

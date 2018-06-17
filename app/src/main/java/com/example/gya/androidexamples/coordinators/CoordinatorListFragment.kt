@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.view.plusAssign
 import com.example.gya.androidexamples.R
 import kotlinx.android.synthetic.main.fragment_cooridnator_list.*
 

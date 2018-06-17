@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidExamples</string>
+    <string name="title_activity_canvas_map">CanvasMapActivity</string>
+    <string name="title_activity_view_map">ViewMapActivity</string>
 </resources>

@@ -15,8 +15,8 @@ class SimpleSharedElementActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, FirstFragment())
-                    .commit()
+                .replace(R.id.container, FirstFragment())
+                .commit()
         }
     }
 
@@ -26,7 +26,7 @@ class SimpleSharedElementActivity : AppCompatActivity() {
 
         fun start(context: Context) {
             context.startActivity(
-                    Intent(context, SimpleSharedElementActivity::class.java)
+                Intent(context, SimpleSharedElementActivity::class.java)
             )
         }
     }

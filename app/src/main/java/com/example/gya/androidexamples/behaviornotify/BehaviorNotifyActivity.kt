@@ -35,14 +35,16 @@ class BehaviorNotifyActivity : AppCompatActivity() {
         val adapter = object : RecyclerView.Adapter<ImageViewHolder>() {
 
             private val colors = listOf(
-                    Color.BLACK, Color.BLUE, Color.CYAN, Color.DKGRAY, Color.GRAY,
-                    Color.GREEN, Color.LTGRAY, Color.MAGENTA, Color.RED, Color.YELLOW)
+                Color.BLACK, Color.BLUE, Color.CYAN, Color.DKGRAY, Color.GRAY,
+                Color.GREEN, Color.LTGRAY, Color.MAGENTA, Color.RED, Color.YELLOW
+            )
 
             override fun getItemCount(): Int = colors.size
 
             override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
                 return ImageViewHolder(
-                        LayoutInflater.from(parent.context).inflate(R.layout.item_behavior_notify_color, parent, false))
+                    LayoutInflater.from(parent.context).inflate(R.layout.item_behavior_notify_color, parent, false)
+                )
             }
 
             override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {

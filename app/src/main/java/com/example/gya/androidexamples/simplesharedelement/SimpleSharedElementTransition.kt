@@ -8,7 +8,7 @@ import android.support.transition.TransitionSet
 class SimpleSharedElementTransition : TransitionSet() {
     init {
         addTransition(ChangeBounds())
-                .addTransition(ChangeTransform())
-                .addTransition(ChangeImageTransform())
+            .addTransition(ChangeTransform())
+            .addTransition(ChangeImageTransform())
     }
 }

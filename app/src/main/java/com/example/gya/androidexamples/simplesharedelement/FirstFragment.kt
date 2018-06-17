@@ -14,9 +14,11 @@ import kotlinx.android.synthetic.main.fragment_first.*
 
 class FirstFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater,
-                              container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
 
@@ -27,12 +29,12 @@ class FirstFragment : Fragment() {
 
         Handler().postDelayed({
             activity?.supportFragmentManager
-                    ?.beginTransaction()
-                    ?.setReorderingAllowed(true)
-                    ?.addSharedElement(logo, TRANSITION_NAME)
-                    ?.replace(R.id.container, SecondFragment())
-                    ?.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    ?.commit()
+                ?.beginTransaction()
+                ?.setReorderingAllowed(true)
+                ?.addSharedElement(logo, TRANSITION_NAME)
+                ?.replace(R.id.container, SecondFragment())
+                ?.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                ?.commit()
         }, 1000)
     }
 }

@@ -14,8 +14,8 @@ class CoordinatorsActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                    .add(R.id.container, CoordinatorListFragment.newInstance())
-                    .commit()
+                .add(R.id.container, CoordinatorListFragment.newInstance())
+                .commit()
         }
     }
 
@@ -31,7 +31,7 @@ class CoordinatorsActivity : AppCompatActivity() {
 
         fun start(context: Context) {
             context.startActivity(
-                    Intent(context, CoordinatorsActivity::class.java)
+                Intent(context, CoordinatorsActivity::class.java)
             )
         }
     }

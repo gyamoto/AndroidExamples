@@ -23,16 +23,17 @@ class GridItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     private val colors = listOf(
-            Large(Color.BLACK),
-            Medium(Color.BLUE),
-            Medium(Color.CYAN),
-            Large(Color.DKGRAY),
-            Small(Color.GRAY),
-            Small(Color.GREEN),
-            Small(Color.LTGRAY),
-            Medium(Color.MAGENTA),
-            Medium(Color.RED),
-            Large(Color.YELLOW))
+        Large(Color.BLACK),
+        Medium(Color.BLUE),
+        Medium(Color.CYAN),
+        Large(Color.DKGRAY),
+        Small(Color.GRAY),
+        Small(Color.GREEN),
+        Small(Color.LTGRAY),
+        Medium(Color.MAGENTA),
+        Medium(Color.RED),
+        Large(Color.YELLOW)
+    )
 
     fun getMaxCount(position: Int): Int {
         if (IntRange(0, colors.size - 1).contains(position)) {

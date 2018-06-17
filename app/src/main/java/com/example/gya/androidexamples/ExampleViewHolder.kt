@@ -13,7 +13,8 @@ class ExampleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     companion object {
         fun inflate(parent: ViewGroup) = ExampleViewHolder(
-                LayoutInflater.from(parent.context).inflate(R.layout.item_example, parent, false))
+            LayoutInflater.from(parent.context).inflate(R.layout.item_example, parent, false)
+        )
     }
 
     fun bind(example: Example) {

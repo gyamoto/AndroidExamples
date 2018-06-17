@@ -10,7 +10,7 @@ import android.util.AttributeSet
  * 開閉する[RecyclerView]
  */
 class CollapsableRecyclerView @JvmOverloads constructor(
-        context: Context, attrs: AttributeSet? = null, defStyle: Int = 0
+    context: Context, attrs: AttributeSet? = null, defStyle: Int = 0
 ) : RecyclerView(context, attrs, defStyle) {
 
     private val collapsibleAdapter = CollapsibleRecyclerAdapter()

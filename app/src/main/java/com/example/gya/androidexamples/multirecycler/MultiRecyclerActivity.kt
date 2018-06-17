@@ -31,18 +31,20 @@ class MultiRecyclerActivity : AppCompatActivity() {
         first.background = Color.GRAY
         first.collapsedColor = Color.WHITE
         first.colors = listOf(
-                Color.RED, Color.GREEN, Color.BLUE,
-                Color.RED, Color.GREEN, Color.BLUE,
-                Color.RED, Color.GREEN, Color.BLUE)
+            Color.RED, Color.GREEN, Color.BLUE,
+            Color.RED, Color.GREEN, Color.BLUE,
+            Color.RED, Color.GREEN, Color.BLUE
+        )
         first.collapsed = true
         first.setItemClickListener { collapse(first, second) }
 
         second.background = Color.GRAY
         second.collapsedColor = Color.BLACK
         second.colors = listOf(
-                Color.CYAN, Color.MAGENTA, Color.YELLOW,
-                Color.CYAN, Color.MAGENTA, Color.YELLOW,
-                Color.CYAN, Color.MAGENTA, Color.YELLOW)
+            Color.CYAN, Color.MAGENTA, Color.YELLOW,
+            Color.CYAN, Color.MAGENTA, Color.YELLOW,
+            Color.CYAN, Color.MAGENTA, Color.YELLOW
+        )
         second.collapsed = false
         second.setItemClickListener { collapse(second, first) }
     }
@@ -55,16 +57,16 @@ class MultiRecyclerActivity : AppCompatActivity() {
         other.collapsed = true
 
         ValueAnimator.ofFloat(0f, 1f)
-                .apply {
-                    duration = 300L
-                    addUpdateListener {
-                        val weight = it.animatedValue as Float
-                        own.layoutParams = (own.layoutParams as LinearLayout.LayoutParams)
-                                .apply { this.weight = weight }
-                        other.layoutParams = (other.layoutParams as LinearLayout.LayoutParams)
-                                .apply { this.weight = 1f - weight }
-                    }
-                }.start()
+            .apply {
+                duration = 300L
+                addUpdateListener {
+                    val weight = it.animatedValue as Float
+                    own.layoutParams = (own.layoutParams as LinearLayout.LayoutParams)
+                        .apply { this.weight = weight }
+                    other.layoutParams = (other.layoutParams as LinearLayout.LayoutParams)
+                        .apply { this.weight = 1f - weight }
+                }
+            }.start()
 
     }
 }

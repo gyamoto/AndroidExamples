@@ -27,10 +27,11 @@ class GridItemDecoration(context: Context) : RecyclerView.ItemDecoration() {
         val isEnd = spanIndex + spanSize == spanCount
 
         outRect.set(
-                calculateOffsetStart(isStart, isEnd, virtualColumns),
-                calculateOffsetTop(isTop),
-                calculateOffsetEnd(isStart, isEnd, virtualColumns),
-                margin)
+            calculateOffsetStart(isStart, isEnd, virtualColumns),
+            calculateOffsetTop(isTop),
+            calculateOffsetEnd(isStart, isEnd, virtualColumns),
+            margin
+        )
     }
 
     private fun calculateOffsetTop(isTop: Boolean): Int {

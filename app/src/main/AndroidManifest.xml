@@ -20,6 +20,8 @@
         <activity android:name=".multirecycler.MultiRecyclerActivity" />
         <activity android:name=".simplesharedelement.SimpleSharedElementActivity" />
         <activity android:name=".coordinators.CoordinatorsActivity" />
+        <activity android:name=".scrollablemap.CanvasMapActivity" />
+        <activity android:name=".scrollablemap.ViewMapActivity" />
     </application>
 
 </manifest>

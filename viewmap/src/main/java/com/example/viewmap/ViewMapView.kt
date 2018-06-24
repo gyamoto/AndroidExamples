@@ -11,6 +11,9 @@ import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import android.view.View
 import androidx.core.graphics.values
+import androidx.core.view.children
+import androidx.core.view.plusAssign
+import kotlinx.android.synthetic.main.view_map_view.view.*
 
 class ViewMapView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyle: Int = 0

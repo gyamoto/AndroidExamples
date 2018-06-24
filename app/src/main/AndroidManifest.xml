@@ -15,12 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".behaviornotify.BehaviorNotifyActivity" />
-        <activity android:name=".griddecoration.GridDecorationActivity" />
-        <activity android:name=".multirecycler.MultiRecyclerActivity" />
-        <activity android:name=".simplesharedelement.SimpleSharedElementActivity" />
-        <activity android:name=".coordinators.CoordinatorsActivity" />
-        <activity android:name=".scrollablemap.ViewMapActivity" />
+        <activity android:name="com.example.behaviornotify.BehaviorNotifyActivity" />
+        <activity android:name="com.example.griddecoration.GridDecorationActivity" />
+        <activity android:name="com.example.multirecycler.MultiRecyclerActivity" />
+        <activity android:name="com.example.simplesharedelement.SimpleSharedElementActivity" />
+        <activity android:name="com.example.coordinators.CoordinatorsActivity" />
+        <activity android:name="com.example.viewmap.ViewMapActivity" />
     </application>
 
 </manifest>

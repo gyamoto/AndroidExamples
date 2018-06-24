@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':behaviornotify', ':multirecycler', ':griddecoration', ':simplesharedelement', ':coordinators', ':viewmap'

@@ -4,6 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidExamples.iml" filepath="$PROJECT_DIR$/AndroidExamples.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/behaviornotify/behaviornotify.iml" filepath="$PROJECT_DIR$/behaviornotify/behaviornotify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coordinators/coordinators.iml" filepath="$PROJECT_DIR$/coordinators/coordinators.iml" />
+      <module fileurl="file://$PROJECT_DIR$/griddecoration/griddecoration.iml" filepath="$PROJECT_DIR$/griddecoration/griddecoration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multirecycler/multirecycler.iml" filepath="$PROJECT_DIR$/multirecycler/multirecycler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simplesharedelement/simplesharedelement.iml" filepath="$PROJECT_DIR$/simplesharedelement/simplesharedelement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewmap/viewmap.iml" filepath="$PROJECT_DIR$/viewmap/viewmap.iml" />
     </modules>
   </component>
 </project>

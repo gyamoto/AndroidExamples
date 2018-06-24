@@ -1,12 +1,12 @@
 package com.example.gya.androidexamples
 
 import android.content.Context
-import com.example.gya.androidexamples.behaviornotify.BehaviorNotifyActivity
-import com.example.gya.androidexamples.coordinators.CoordinatorsActivity
-import com.example.gya.androidexamples.griddecoration.GridDecorationActivity
-import com.example.gya.androidexamples.multirecycler.MultiRecyclerActivity
-import com.example.gya.androidexamples.scrollablemap.ViewMapActivity
-import com.example.gya.androidexamples.simplesharedelement.SimpleSharedElementActivity
+import com.example.behaviornotify.BehaviorNotifyActivity
+import com.example.coordinators.CoordinatorsActivity
+import com.example.griddecoration.GridDecorationActivity
+import com.example.multirecycler.MultiRecyclerActivity
+import com.example.simplesharedelement.SimpleSharedElementActivity
+import com.example.viewmap.ViewMapActivity
 
 enum class Example(val description: String, val action: (Context) -> Unit) {
     BehaviorNotify("RecyclerViewのスクロールをBehaviorでうけとる",

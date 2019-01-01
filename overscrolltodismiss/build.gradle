@@ -1,16 +1,16 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-
     compileSdkVersion 27
 
     defaultConfig {
-        applicationId "com.example.gya.androidexamples"
         minSdkVersion 21
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -21,33 +21,20 @@ android {
         }
     }
 
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
     implementation "com.android.support:appcompat-v7:$support_version"
     implementation "com.android.support:design:$support_version"
     implementation "com.android.support:transition:$support_version"
     implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
     implementation 'androidx.core:core-ktx:0.3'
 
-    implementation project(':behaviornotify')
-    implementation project(':multirecycler')
-    implementation project(':griddecoration')
-    implementation project(':simplesharedelement')
-    implementation project(':coordinators')
-    implementation project(':viewmap')
-    implementation project(':overscrolltodismiss')
-
     testImplementation 'junit:junit:4.12'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-}
-repositories {
-    google()
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }

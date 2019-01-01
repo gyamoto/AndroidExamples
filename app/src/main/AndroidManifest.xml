@@ -21,6 +21,7 @@
         <activity android:name="com.example.simplesharedelement.SimpleSharedElementActivity" />
         <activity android:name="com.example.coordinators.CoordinatorsActivity" />
         <activity android:name="com.example.viewmap.ViewMapActivity" />
+        <activity android:name="com.example.overscrolltodismiss.OverScrollToDismissActivity" />
     </application>
 
 </manifest>

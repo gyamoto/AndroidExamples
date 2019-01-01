@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/coordinators/coordinators.iml" filepath="$PROJECT_DIR$/coordinators/coordinators.iml" />
       <module fileurl="file://$PROJECT_DIR$/griddecoration/griddecoration.iml" filepath="$PROJECT_DIR$/griddecoration/griddecoration.iml" />
       <module fileurl="file://$PROJECT_DIR$/multirecycler/multirecycler.iml" filepath="$PROJECT_DIR$/multirecycler/multirecycler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/overscrolltodismiss/overscrolltodismiss.iml" filepath="$PROJECT_DIR$/overscrolltodismiss/overscrolltodismiss.iml" />
       <module fileurl="file://$PROJECT_DIR$/simplesharedelement/simplesharedelement.iml" filepath="$PROJECT_DIR$/simplesharedelement/simplesharedelement.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewmap/viewmap.iml" filepath="$PROJECT_DIR$/viewmap/viewmap.iml" />
     </modules>

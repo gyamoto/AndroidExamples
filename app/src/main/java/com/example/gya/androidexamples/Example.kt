@@ -5,6 +5,7 @@ import com.example.behaviornotify.BehaviorNotifyActivity
 import com.example.coordinators.CoordinatorsActivity
 import com.example.griddecoration.GridDecorationActivity
 import com.example.multirecycler.MultiRecyclerActivity
+import com.example.overscrolltodismiss.OverScrollToDismissActivity
 import com.example.simplesharedelement.SimpleSharedElementActivity
 import com.example.viewmap.ViewMapActivity
 
@@ -20,4 +21,6 @@ enum class Example(val description: String, val action: (Context) -> Unit) {
     Coordinators("いろいろなCoordinatorLayoutのパターンを試してみる",
         { CoordinatorsActivity.start(it) }),
     ViewMap("GoogleMa風UI ~Viewを添えて~", { ViewMapActivity.start(it) }),
+    OverScrollToDismiss("OverScrollで画面を閉じる",
+        { OverScrollToDismissActivity.start(it) })
 }

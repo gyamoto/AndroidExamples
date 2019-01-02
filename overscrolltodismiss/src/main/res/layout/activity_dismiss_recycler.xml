@@ -4,25 +4,13 @@
     android:id="@+id/elasticContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_light"
     android:transitionGroup="false"
-    app:dragDismissDistance="10dp"
+    app:dragDismissDistance="100dp"
     app:dragDismissScale="0.95">
 
-    <android.support.v4.widget.NestedScrollView
+    <com.example.overscrolltodismiss.DummyRecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1000dp"
-                android:background="@drawable/bg_pattern" />
-
-        </FrameLayout>
-
-    </android.support.v4.widget.NestedScrollView>
+        android:layout_height="match_parent" />
 
 </com.example.overscrolltodismiss.ElasticDragDismissFrameLayout>

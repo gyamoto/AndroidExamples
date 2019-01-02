@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,13 +16,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name="com.example.behaviornotify.BehaviorNotifyActivity" />
+
         <activity android:name="com.example.griddecoration.GridDecorationActivity" />
+
         <activity android:name="com.example.multirecycler.MultiRecyclerActivity" />
+
         <activity android:name="com.example.simplesharedelement.SimpleSharedElementActivity" />
+
         <activity android:name="com.example.coordinators.CoordinatorsActivity" />
+
         <activity android:name="com.example.viewmap.ViewMapActivity" />
-        <activity android:name="com.example.overscrolltodismiss.OverScrollToDismissActivity" />
+
+        <activity android:name="com.example.overscrolltodismiss.OverScrollToDismissListActivity" />
+        <activity
+            android:name="com.example.overscrolltodismiss.DismissCoordinatorActivity"
+            android:theme="@style/OverScroll.Translucent" />
+        <activity
+            android:name="com.example.overscrolltodismiss.DismissNestedScrollActivity"
+            android:theme="@style/OverScroll.Translucent" />
+        <activity
+            android:name="com.example.overscrolltodismiss.DismissRecyclerActivity"
+            android:theme="@style/OverScroll.Translucent" />
     </application>
 
 </manifest>

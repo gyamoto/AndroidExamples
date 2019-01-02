@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">OverscrollToDismiss</string>
+    <string name="recycler">RecyclerView</string>
+    <string name="coordinator">CoordinatorLayout</string>
+    <string name="nested_scroll">NestedScrollView</string>
 </resources>

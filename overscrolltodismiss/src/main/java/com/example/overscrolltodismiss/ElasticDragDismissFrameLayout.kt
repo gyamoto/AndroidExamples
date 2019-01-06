@@ -2,11 +2,11 @@ package com.example.overscrolltodismiss
 
 import android.content.Context
 import android.graphics.Color
-import android.support.v4.view.animation.FastOutSlowInInterpolator
 import android.support.v7.app.AppCompatActivity
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.FrameLayout
 import androidx.core.content.res.getDimensionOrThrow
 import androidx.core.content.res.getFloatOrThrow
@@ -34,6 +34,9 @@ class ElasticDragDismissFrameLayout @JvmOverloads constructor(
     private var draggingUp = false
     private var draggingDown = false
     private var lastActionEvent = 0
+
+    private val interpolator =
+        AnimationUtils.loadInterpolator(context, android.R.interpolator.fast_out_slow_in)
 
     var callback: ElasticDragDismissCallback? = null
 
@@ -108,7 +111,7 @@ class ElasticDragDismissFrameLayout @JvmOverloads constructor(
                         .scaleX(1f)
                         .scaleY(1f)
                         .setDuration(200L)
-                        .setInterpolator(FastOutSlowInInterpolator())
+                        .setInterpolator(interpolator)
                         .setListener(null)
                         .start()
                 }
@@ -134,10 +137,10 @@ class ElasticDragDismissFrameLayout @JvmOverloads constructor(
 
         if (scroll > 0 && !draggingUp && !draggingDown) {
             draggingUp = true
-            if (shouldScale) pivotY = height.toFloat()
+            if (shouldScale) pivotY = 0f
         } else if (scroll < 0 && !draggingUp && !draggingDown) {
             draggingDown = true
-            if (shouldScale) pivotY = 0f
+            if (shouldScale) pivotY = height.toFloat()
         }
 
         var dragFraction = Math.log10(1.0 + Math.abs(totalDrag) / dragDismissDistance).toFloat()
@@ -206,8 +209,8 @@ class ElasticDragDismissFrameLayout @JvmOverloads constructor(
      */
     class SystemChromeFader(private val activity: AppCompatActivity) : ElasticDragDismissCallback {
 
-        private val statusBarAlpha: Int = Color.alpha(activity.window.statusBarColor)
-        private val navBarAlpha: Int = Color.alpha(activity.window.navigationBarColor)
+        private val statusBarAlpha: Float = Color.alpha(activity.window.statusBarColor) / 255f
+        private val navBarAlpha: Float = Color.alpha(activity.window.navigationBarColor) / 255f
         private val fadeNavBar: Boolean = activity.isNavBarOnBottom()
 
         override fun onDrag(
@@ -220,25 +223,17 @@ class ElasticDragDismissFrameLayout @JvmOverloads constructor(
             when {
                 elasticOffsetPixels > 0 -> {
                     activity.window.statusBarColor =
-                            activity.window.statusBarColor.modifyAlpha(
-                                (1f - rawOffset) * statusBarAlpha
-                            )
+                            activity.window.statusBarColor.modifyAlpha((1f - rawOffset) * statusBarAlpha)
                 }
                 elasticOffsetPixels == 0f -> {
                     activity.window.statusBarColor =
-                            activity.window.statusBarColor.modifyAlpha(
-                                statusBarAlpha
-                            )
+                            activity.window.statusBarColor.modifyAlpha(statusBarAlpha)
                     activity.window.navigationBarColor =
-                            activity.window.navigationBarColor.modifyAlpha(
-                                navBarAlpha
-                            )
+                            activity.window.navigationBarColor.modifyAlpha(navBarAlpha)
                 }
                 fadeNavBar -> {
                     activity.window.navigationBarColor =
-                            activity.window.navigationBarColor.modifyAlpha(
-                                (1f - rawOffset) * navBarAlpha
-                            )
+                            activity.window.navigationBarColor.modifyAlpha((1f - rawOffset) * navBarAlpha)
                 }
             }
         }

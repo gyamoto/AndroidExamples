@@ -5,16 +5,24 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_dismiss_nested_scroll.*
-import kotlinx.android.synthetic.main.activity_over_scroll_to_dismiss_list.*
 
 class DismissNestedScrollActivity : AppCompatActivity() {
+
+    private val chromeFader by lazy { ElasticDragDismissFrameLayout.SystemChromeFader(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dismiss_nested_scroll)
+    }
 
-        val chromeFader = ElasticDragDismissFrameLayout.SystemChromeFader(this)
+    override fun onStart() {
+        super.onStart()
         elasticContainer.callback = chromeFader
+    }
+
+    override fun onStop() {
+        elasticContainer.callback = null
+        super.onStop()
     }
 
     companion object {

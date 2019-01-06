@@ -2,6 +2,10 @@
 <resources>
 
     <style name="OverScroll" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorOverScrollPrimary</item>
+        <item name="colorPrimaryDark">@color/colorOverScrollDark</item>
+        <item name="colorAccent">@color/colorOverScrollAccent</item>
+
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
         <item name="android:windowAllowReturnTransitionOverlap">true</item>
         <item name="android:windowSharedElementsUseOverlay">false</item>

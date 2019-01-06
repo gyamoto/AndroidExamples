@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                 ExampleViewHolder.inflate(parent)
 
             override fun onBindViewHolder(holder: ExampleViewHolder, position: Int) {
-                val example = Example.values()[position]
+                val example = Example.values().reversed()[position]
                 holder.bind(example)
                 holder.itemView.setOnClickListener { example.action(holder.itemView.context) }
             }

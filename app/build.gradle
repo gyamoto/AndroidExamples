@@ -44,6 +44,7 @@ dependencies {
     implementation project(':coordinators')
     implementation project(':viewmap')
     implementation project(':overscrolltodismiss')
+    implementation project(':sharedelement')
 
     testImplementation 'junit:junit:4.12'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

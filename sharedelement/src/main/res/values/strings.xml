@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">sharedelement</string>
+    <string name="title_activity_shared_element">SharedElementActivity</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gyamoto.sharedelement">
+
+    <application>
+        <activity
+            android:name=".ui.SharedElementActivity"
+            android:label="@string/title_activity_shared_element"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".SharedElementActivity" />
+    </application>
+
+</manifest>

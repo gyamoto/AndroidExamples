@@ -46,6 +46,7 @@
             android:theme="@style/OverScroll.Translucent" />
 
         <activity android:name="com.gyamoto.sharedelement.ui.SharedElementActivity" />
+        <activity android:name="com.gyamoto.sharedelement.ui.SharedElementResultActivity" />
     </application>
 
 </manifest>

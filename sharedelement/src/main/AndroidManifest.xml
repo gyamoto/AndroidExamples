@@ -4,9 +4,13 @@
 
     <application>
         <activity
+            android:name=".ui.SharedElementResultActivity"
+            android:label="@string/title_activity_shared_element_result"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".ui.SharedElementActivity"
             android:label="@string/title_activity_shared_element"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SharedElementActivity" />
     </application>
 

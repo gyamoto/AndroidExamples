@@ -16,21 +16,27 @@ class SharedElementActivity : AppCompatActivity() {
         setContentView(R.layout.activity_shared_element)
         setSupportActionBar(toolbar)
 
-        list.images = listOf(
+        list.apply {
+            images = listOf(
 
-            SharedParentRecyclerView.Images(
-                title = "Animal",
-                urls = List(10) { "https://placeimg.com/720/720/animals#$it" }
-            ),
-            SharedParentRecyclerView.Images(
-                title = "Nature",
-                urls = List(10) { "https://placeimg.com/720/720/nature#$it" }
-            ),
-            SharedParentRecyclerView.Images(
-                title = "Tech",
-                urls = List(10) { "https://placeimg.com/720/720/tech#$it" }
+                SharedParentRecyclerView.Images(
+                    title = "Animal",
+                    urls = List(10) { "https://placeimg.com/720/720/animals#$it" }
+                ),
+                SharedParentRecyclerView.Images(
+                    title = "Nature",
+                    urls = List(10) { "https://placeimg.com/720/720/nature#$it" }
+                ),
+                SharedParentRecyclerView.Images(
+                    title = "Tech",
+                    urls = List(10) { "https://placeimg.com/720/720/tech#$it" }
+                )
             )
-        )
+
+            clickChild = { view, title, url ->
+                SharedElementResultActivity.start(this@SharedElementActivity, view, title, url)
+            }
+        }
     }
 
     companion object {

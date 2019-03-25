@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import com.gyamoto.sharedelement.R
 import kotlinx.android.synthetic.main.item_parent.view.*
@@ -27,7 +28,12 @@ class SharedParentRecyclerView @JvmOverloads constructor(
     ) {
         fun bind(images: Images) {
             itemView.title.text = images.title
-            itemView.list.images = images.urls
+            itemView.list.apply {
+                urls = images.urls
+                clickImage = { view, url ->
+                    clickChild(view, images.title, url)
+                }
+            }
         }
     }
 
@@ -59,6 +65,8 @@ class SharedParentRecyclerView @JvmOverloads constructor(
             field = value
             innerAdapter.submitList(value)
         }
+
+    var clickChild: (View, String, String) -> Unit = { _, _, _ -> }
 
     init {
         adapter = innerAdapter

@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.gyamoto.sharedelement.R
@@ -22,9 +23,19 @@ class SharedChildRecyclerView @JvmOverloads constructor(
         LayoutInflater.from(parent.context).inflate(R.layout.item_child, parent, false)
     ) {
         fun bind(url: String) {
+
             Glide.with(context)
                 .load(url)
                 .into(itemView.image)
+
+            itemView.image.apply {
+
+                transitionName = url
+
+                setOnClickListener {
+                    clickImage(it, url)
+                }
+            }
         }
     }
 
@@ -50,11 +61,13 @@ class SharedChildRecyclerView @JvmOverloads constructor(
 
     private val innerAdapter = Adapter()
 
-    var images: List<String> = emptyList()
+    var urls: List<String> = emptyList()
         set(value) {
             field = value
             innerAdapter.submitList(value)
         }
+
+    var clickImage: (View, String) -> Unit = { _, _ -> }
 
     init {
         adapter = innerAdapter

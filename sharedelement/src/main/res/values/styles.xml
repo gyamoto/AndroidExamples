@@ -2,12 +2,13 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.Light" />
 
-    <style name="AppTheme.NoActionBar">
+    <style name="AppTheme.Animation">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
+        <item name="android:windowEnterTransition">@transition/image_enter</item>
+        <item name="android:windowReturnTransition">@transition/image_return</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/image_shared_enter</item>
+        <item name="android:windowSharedElementReturnTransition">@transition/image_shared_return</item>
     </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

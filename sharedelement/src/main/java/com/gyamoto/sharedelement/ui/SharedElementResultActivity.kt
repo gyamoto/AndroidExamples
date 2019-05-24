@@ -44,7 +44,7 @@ class SharedElementResultActivity : AppCompatActivity() {
                 ActivityOptionsCompat.makeSceneTransitionAnimation(
                     activity,
                     view,
-                    view.transitionName
+                    activity.getString(R.string.transition_card)
                 ).toBundle()
             )
         }

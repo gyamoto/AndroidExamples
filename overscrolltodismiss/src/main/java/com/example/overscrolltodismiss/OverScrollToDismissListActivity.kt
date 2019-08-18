@@ -3,7 +3,7 @@ package com.example.overscrolltodismiss
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_over_scroll_to_dismiss_list.*
 
 class OverScrollToDismissListActivity : AppCompatActivity() {

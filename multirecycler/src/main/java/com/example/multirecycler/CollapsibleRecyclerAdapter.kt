@@ -1,7 +1,7 @@
 package com.example.multirecycler
 
-import android.support.v7.util.DiffUtil
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import kotlin.properties.Delegates
 

@@ -3,7 +3,7 @@ package com.gyamoto.sharedelement.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.gyamoto.sharedelement.R
 import com.gyamoto.sharedelement.ui.parent.SharedParentRecyclerView
 import kotlinx.android.synthetic.main.activity_shared_element.*

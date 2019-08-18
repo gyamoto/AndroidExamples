@@ -1,8 +1,8 @@
 package com.example.overscrolltodismiss
 
-import android.support.annotation.ColorInt
-import android.support.annotation.FloatRange
-import android.support.annotation.IntRange
+import androidx.annotation.ColorInt
+import androidx.annotation.FloatRange
+import androidx.annotation.IntRange
 
 @ColorInt
 fun Int.modifyAlpha(@IntRange(from = 0, to = 255) alpha: Int): Int {

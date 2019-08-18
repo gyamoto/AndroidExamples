@@ -1,9 +1,9 @@
 package com.example.simplesharedelement
 
-import android.support.transition.ChangeBounds
-import android.support.transition.ChangeImageTransform
-import android.support.transition.ChangeTransform
-import android.support.transition.TransitionSet
+import androidx.transition.ChangeBounds
+import androidx.transition.ChangeImageTransform
+import androidx.transition.ChangeTransform
+import androidx.transition.TransitionSet
 
 class SimpleSharedElementTransition : TransitionSet() {
     init {

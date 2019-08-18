@@ -9,7 +9,7 @@
     app:dragDismissDistance="100dp"
     app:dragDismissScale="0.95">
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -24,6 +24,6 @@
 
         </FrameLayout>
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </com.example.overscrolltodismiss.ElasticDragDismissFrameLayout>

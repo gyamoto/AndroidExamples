@@ -1,13 +1,13 @@
 package com.example.behaviornotify
 
 import android.content.Context
-import android.support.design.widget.CoordinatorLayout
-import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.recyclerview.widget.RecyclerView
 
 class ScrollNotifyView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -26,9 +26,9 @@ class ScrollNotifyView @JvmOverloads constructor(
     class NotifyBehavior : CoordinatorLayout.Behavior<ScrollNotifyView>() {
 
         override fun layoutDependsOn(
-            parent: CoordinatorLayout?,
-            child: ScrollNotifyView?,
-            dependency: View?
+            parent: CoordinatorLayout,
+            child: ScrollNotifyView,
+            dependency: View
         ): Boolean {
             return dependency is RecyclerView
         }

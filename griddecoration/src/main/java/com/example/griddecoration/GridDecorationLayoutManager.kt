@@ -1,11 +1,11 @@
 package com.example.griddecoration
 
 import android.content.Context
-import android.support.v7.widget.GridLayoutManager
-import android.widget.GridLayout
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class GridDecorationLayoutManager(context: Context, val adapter: GridItemAdapter) :
-    GridLayoutManager(context, 6, GridLayout.VERTICAL, false) {
+    GridLayoutManager(context, 6, RecyclerView.VERTICAL, false) {
 
     init {
         spanSizeLookup = object : SpanSizeLookup() {

@@ -3,8 +3,8 @@ package com.example.viewmap
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Matrix
-import android.support.constraint.ConstraintLayout
-import android.support.v4.view.GestureDetectorCompat
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.GestureDetectorCompat
 import android.util.AttributeSet
 import android.view.GestureDetector
 import android.view.MotionEvent

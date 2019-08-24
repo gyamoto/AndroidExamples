@@ -3,21 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="8dp"
-        app:cardCornerRadius="8dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/name"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline1"
-            app:layout_constraintDimensionRatio="h,1:1"
-            tools:text="V" />
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline1"
+                app:layout_constraintDimensionRatio="h,1:1"
+                tools:text="V" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

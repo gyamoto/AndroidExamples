@@ -1,10 +1,11 @@
-package com.gyamoto.viewpagertransformer
+package com.gyamoto.viewpagertransformer.two
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.gyamoto.viewpagertransformer.R
 import com.gyamoto.viewpagertransformer.databinding.ViewContentBinding
 
 class TwoAdapter : ListAdapter<String, TwoAdapter.TwoViewHolder>(

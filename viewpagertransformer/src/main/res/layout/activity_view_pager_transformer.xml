@@ -15,7 +15,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ViewPager1 Normal"
+                android:padding="8dp"
+                android:text="@string/viewpager1_normal"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,7 +38,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ViewPager1 Zoom"
+                android:padding="8dp"
+                android:text="@string/viewpager1_zoom"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -59,7 +61,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ViewPager1 Depth"
+                android:padding="8dp"
+                android:text="@string/viewpager1_depth"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -81,7 +84,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ViewPager1 Padding"
+                android:padding="8dp"
+                android:text="@string/viewpager1_padding"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -103,7 +107,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ViewPager2 Normal"
+                android:padding="8dp"
+                android:text="@string/viewpager2_normal"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -125,7 +130,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ViewPager2 Zoom"
+                android:padding="8dp"
+                android:text="@string/viewpager2_zoom"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -147,7 +153,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ViewPager2 Depth"
+                android:padding="8dp"
+                android:text="@string/viewpager2_depth"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -169,7 +176,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ViewPager2 Padding"
+                android:padding="8dp"
+                android:text="@string/viewpager2_padding"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
 
             <androidx.constraintlayout.widget.ConstraintLayout

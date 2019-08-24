@@ -27,5 +27,7 @@ enum class Example(val description: String, val action: (Context) -> Unit) {
         { OverScrollToDismissListActivity.start(it) }),
     SharedElement("Activity間でSharedElement",
         { SharedElementActivity.start(it) }),
-    ViewPagerTransformer("Foo", { ViewPagerTransformerActivity.start(it) })
+    ViewPagerTransformer(
+        "ViewPager1/2でPagerTransformer",
+        { ViewPagerTransformerActivity.start(it) })
 }

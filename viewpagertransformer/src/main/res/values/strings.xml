@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="viewpager1_normal">ViewPager1 Normal</string>
+    <string name="viewpager1_zoom">ViewPager1 Zoom</string>
+    <string name="viewpager1_depth">ViewPager1 Depth</string>
+    <string name="viewpager1_padding">ViewPager1 Padding</string>
+
+    <string name="viewpager2_normal">ViewPager2 Normal</string>
+    <string name="viewpager2_zoom">ViewPager2 Zoom</string>
+    <string name="viewpager2_depth">ViewPager2 Depth</string>
+    <string name="viewpager2_padding">ViewPager2 Padding</string>
+</resources>

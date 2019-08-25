@@ -9,6 +9,7 @@ import com.example.overscrolltodismiss.OverScrollToDismissListActivity
 import com.example.simplesharedelement.SimpleSharedElementActivity
 import com.example.viewmap.ViewMapActivity
 import com.gyamoto.sharedelement.ui.SharedElementActivity
+import com.gyamoto.viewpagertransformer.ViewPagerTransformerActivity
 
 enum class Example(val description: String, val action: (Context) -> Unit) {
     BehaviorNotify("RecyclerViewのスクロールをBehaviorでうけとる",
@@ -25,5 +26,8 @@ enum class Example(val description: String, val action: (Context) -> Unit) {
     OverScrollToDismiss("OverScrollで画面を閉じる",
         { OverScrollToDismissListActivity.start(it) }),
     SharedElement("Activity間でSharedElement",
-        { SharedElementActivity.start(it) })
+        { SharedElementActivity.start(it) }),
+    ViewPagerTransformer(
+        "ViewPager1/2でPagerTransformer",
+        { ViewPagerTransformerActivity.start(it) })
 }

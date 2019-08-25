@@ -51,6 +51,8 @@
         <activity
             android:name="com.gyamoto.sharedelement.ui.SharedElementResultActivity"
             android:theme="@style/AppTheme.Animation" />
+
+        <activity android:name="com.gyamoto.viewpagertransformer.ViewPagerTransformerActivity" />
     </application>
 
 </manifest>

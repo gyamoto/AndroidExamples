@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/sharedelement/sharedelement.iml" filepath="$PROJECT_DIR$/sharedelement/sharedelement.iml" />
       <module fileurl="file://$PROJECT_DIR$/simplesharedelement/simplesharedelement.iml" filepath="$PROJECT_DIR$/simplesharedelement/simplesharedelement.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewmap/viewmap.iml" filepath="$PROJECT_DIR$/viewmap/viewmap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewpagertransformer/viewpagertransformer.iml" filepath="$PROJECT_DIR$/viewpagertransformer/viewpagertransformer.iml" />
     </modules>
   </component>
 </project>

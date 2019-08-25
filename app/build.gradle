@@ -24,6 +24,8 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+
+    dataBinding.enabled = true
 }
 
 dependencies {
@@ -45,6 +47,7 @@ dependencies {
     implementation project(':viewmap')
     implementation project(':overscrolltodismiss')
     implementation project(':sharedelement')
+    implementation project(':viewpagertransformer')
 
     testImplementation 'junit:junit:4.12'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

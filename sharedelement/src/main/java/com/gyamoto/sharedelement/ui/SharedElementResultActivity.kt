@@ -2,9 +2,9 @@ package com.gyamoto.sharedelement.ui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.core.app.ActivityOptionsCompat
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import androidx.core.os.bundleOf
 import com.bumptech.glide.Glide
 import com.gyamoto.sharedelement.R
@@ -13,8 +13,8 @@ import kotlinx.android.synthetic.main.content_shared_element_result.*
 
 class SharedElementResultActivity : AppCompatActivity() {
 
-    private val title: String by lazy { intent.getStringExtra(EXTRA_TITLE) }
-    private val imageUrl: String by lazy { intent.getStringExtra(EXTRA_IMAGE_URL) }
+    private val title: String? by lazy { intent.getStringExtra(EXTRA_TITLE) }
+    private val imageUrl: String? by lazy { intent.getStringExtra(EXTRA_IMAGE_URL) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

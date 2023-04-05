@@ -18,9 +18,6 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
       - run:
-          name: "Test dot"
-          command: which dot
-      - run:
           name: "Text graphviz"
           command: which graphviz
 

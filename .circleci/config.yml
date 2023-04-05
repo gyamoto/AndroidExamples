@@ -20,7 +20,7 @@ jobs:
       - run:
           name: "あればやります"
           command: |
-            md5 foo.txt > new_foo.md5
+            md5sum foo.txt > new_foo.md5
 
             if [ "$(diff foo.md5 new_foo.md5)" ]
             then
@@ -31,6 +31,7 @@ jobs:
             fi
 
             echo "continue"
+            sudo apt-get install -y graphviz
             dot -T png foo.txt -o foo.png
             mv new_foo.md5 foo.md5
 

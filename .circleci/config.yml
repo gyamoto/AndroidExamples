@@ -36,6 +36,7 @@ jobs:
             mv new_foo.md5 foo.md5
 
             git config --global user.name 'foo-user'
+            git config --global user.email 'foo@gyamoto.dev'
             git add foo.*
             git commit -m 'update foo.*'
             git push origin $CIRCLE_BRANCH

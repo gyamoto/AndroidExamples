@@ -14,9 +14,6 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
       - add_ssh_keys:
           fingerprints:
             - "41:e0:a7:e9:e0:b9:4e:cc:1e:1a:0d:b9:49:6c:16:17"
@@ -27,13 +24,13 @@ jobs:
 
             if [ "$(diff foo.md5 new_foo.md5)" ]
             then
-                echo "diff exist"
+                echo "log : diff exist"
             else 
-                echo "no diff exist"
+                echo "log : no diff exist"
                 exit 
             fi
 
-            echo "continue"
+            echo "log : continue"
             sudo apt-get install -y graphviz
             dot -T png foo.txt -o foo.png
             mv new_foo.md5 foo.md5

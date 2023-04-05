@@ -1,5 +1,6 @@
 strict graph { 
   a -- b
   a -- b
+  b -- color
   b -- a [color=blue]
 } 

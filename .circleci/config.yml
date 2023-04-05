@@ -17,10 +17,27 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-      - run: "sudo apt-get install -y graphviz"
       - run:
-          name: "Text graphviz"
-          command: which graphviz
+          name: "あればやります"
+          command: |
+            md5 foo.txt > new_foo.md5
+
+            if [ "$(diff foo.md5 new_foo.md5)" ]
+            then
+                echo "diff exist"
+            else 
+                echo "no diff exist"
+                exit 
+            fi
+
+            echo "continue"
+            dot -T png foo.txt -o foo.png
+            mv new_foo.md5 foo.md5
+
+            git config --global user.name 'foo-user'
+            git add foo.*
+            git commit -m 'update foo.*'
+            git push origin $CIRCLE_BRANCH
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows

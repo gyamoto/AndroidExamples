@@ -14,23 +14,23 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
-      - add_ssh_keys:
-          fingerprints:
-            - "41:e0:a7:e9:e0:b9:4e:cc:1e:1a:0d:b9:49:6c:16:17"
       - run:
           name: "Prepare md5sum"
           command: md5sum foo.txt > new_foo.md5
       - when:
-          condition: diff foo.md5 new_foo.md5
+          condition: $(diff foo.md5 new_foo.md5)
           steps:
             - run: echo "Skip create graph"
       - unless:
-          condition: diff foo.md5 new_foo.md5
+          condition: $(diff foo.md5 new_foo.md5)
           steps:
             - run: echo "Prepate create graph"
             - run: sudo apt-get install -y graphviz
             - run: dot -T png foo.txt -o foo.png
             - run: mv new_foo.md5 foo.md5
+            - add_ssh_keys:
+              fingerprints:
+                - "41:e0:a7:e9:e0:b9:4e:cc:1e:1a:0d:b9:49:6c:16:17"
             - run: |
                 git config --global user.name 'foo-user'
                 git config --global user.email 'foo@gyamoto.dev'

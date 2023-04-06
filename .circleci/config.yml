@@ -29,8 +29,8 @@ jobs:
             - run: dot -T png foo.txt -o foo.png
             - run: mv new_foo.md5 foo.md5
             - add_ssh_keys:
-              fingerprints:
-                - "41:e0:a7:e9:e0:b9:4e:cc:1e:1a:0d:b9:49:6c:16:17"
+                fingerprints:
+                  - "41:e0:a7:e9:e0:b9:4e:cc:1e:1a:0d:b9:49:6c:16:17"
             - run: |
                 git config --global user.name 'foo-user'
                 git config --global user.email 'foo@gyamoto.dev'

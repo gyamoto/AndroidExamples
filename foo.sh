@@ -14,4 +14,4 @@ mv new_foo.md5 foo.md5
 
 git config --global user.name 'foo-user'
 git add foo.*
-git commit -m 'update foo.*'
+git commit -m 'update foo.* [ci skip]'

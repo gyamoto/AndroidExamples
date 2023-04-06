@@ -18,11 +18,11 @@ jobs:
           name: "Prepare md5sum"
           command: md5sum foo.txt > new_foo.md5
       - when:
-          condition: $(diff foo.md5 new_foo.md5)
+          condition: << diff foo.md5 new_foo.md5 >>
           steps:
             - run: echo "Skip create graph"
       - unless:
-          condition: $(diff foo.md5 new_foo.md5)
+          condition: << diff foo.md5 new_foo.md5 >>
           steps:
             - run: echo "Prepate create graph"
             - run: sudo apt-get install -y graphviz
